@@ -132,7 +132,7 @@
 			event:addHeader("from_user", from);
 			event:addHeader("from_host", domain_name);
 			event:addHeader("from_full", "sip:" .. from .."@".. domain_name);
-			event:addHeader("sip_profile","internal");
+			event:addHeader("sip_profile","websocket");
 			event:addHeader("to", to);
 			event:addHeader("to_user", extension);
 			event:addHeader("to_host", domain_name);
