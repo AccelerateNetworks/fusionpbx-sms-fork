@@ -24,4 +24,4 @@ if($data->ClientSecret != $token) {
 }
 
 
-route_and_send_sms($data->{'From'}, $data->{'To'}, $data->{'Content'});
+route_and_send_sms($data->{'From'}, $data->To[0], $data->{'Content'});
