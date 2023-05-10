@@ -23,5 +23,9 @@ if($data->ClientSecret != $token) {
 	die("access denied");
 }
 
+$to = $data->To;
+if(is_array($to)) {
+	$to = $to[0];
+}
 
-route_and_send_sms($data->{'From'}, $data->To[0], $data->{'Content'});
+route_and_send_sms($data->{'From'}, $to, $data->{'Content'});
